@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 2.8)
 
 set(project_name "hello")
-set(project_sources "app.cpp")
+set(project_sources "src/app.cpp")
 set(project_test_name "hello-test")
-set(project_test_sources "test.cpp")
+set(project_test_sources "test/test.cpp")
 
 project(${project_name})
 add_subdirectory(ext/googletest)

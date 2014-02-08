@@ -10,5 +10,4 @@ ExternalProject_Get_Property(tinyxml2 source_dir)
 set(tinyxml2_include_dirs ${source_dir} PARENT_SCOPE)
 
 ExternalProject_Get_Property(tinyxml2 binary_dir)
-message(xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ${binary_dir})
 set(tinyxml2_libs_dir ${binary_dir} PARENT_SCOPE)
