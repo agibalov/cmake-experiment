@@ -3,6 +3,10 @@ include(ExternalProject)
 
 ExternalProject_Add(googletest
     SVN_REPOSITORY http://googletest.googlecode.com/svn/trunk
+    CMAKE_ARGS -DCMAKE_ARCHIVE_OUTPUT_DIRECTORY_DEBUG:PATH=.
+               -DCMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE:PATH=.
+               -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
+               -Dgtest_force_shared_crt=ON
     INSTALL_COMMAND ""
 )
 

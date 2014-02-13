@@ -3,6 +3,9 @@ include(ExternalProject)
 
 ExternalProject_Add(tinyxml2
     GIT_REPOSITORY https://github.com/leethomason/tinyxml2.git
+    CMAKE_ARGS -DCMAKE_ARCHIVE_OUTPUT_DIRECTORY_DEBUG:PATH=.
+               -DCMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE:PATH=.
+               -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
     INSTALL_COMMAND ""
 )
 
